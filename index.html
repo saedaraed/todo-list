@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background: #fff;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+.container {
+  display: block;
+  width:400px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 100px auto 0;
+  background-color: #c2a7cf;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li * {
+  float: left;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+
+input, button {
+  outline: none;
+}
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: #333;
+}
+/* Heading */
+h3,
+label[for='new-task'] {
+  color:#4f116b;
+  font-weight: 700;
+  font-size: 15px;
+
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new-task {
+  float: left;
+  width: 318px;
+}
+
+p button {
+  color: #ffffff;
+  font-size: larger;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color:#4f116b;
+}
+p button:hover{
+    color: #c2a7cf;
+}
+
+/* Task list */
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+}
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+li >  input[type="text"] {
+  width: 226px;
+}
+li > .delete {
+  color: #CF2323;
+  font-weight: bolder;
+}
+
+/* Completed */
+/* #completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+} */
+
+/* Edit Task */
+ul li input[type=text] {
+  display:none;
+}
+
+ul li.editMode input[type=text] {
+  display:block;
+}
+
+ul li.editMode label {
+  display:none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+          <label class="title" for="new-task">Add Item</label>
+          <input id="new-task" type="text">
+          <button>+</button>
+        </p>
+        
+        <h3 class="title">Todo</h3>
+        <ul id="incomplete-tasks">
+          <li>
+            <input type="checkbox">
+            <label>Pay Bills</label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">X</button>
+          </li>
+          <li class="editMode">
+            <input type="checkbox">
+            <label>Go Shopping</label>
+            <input type="text" value="Go Shopping">
+            <button class="edit">Edit</button>
+            <button class="delete">X</button>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Pay Bills</label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">X</button>
+          </li>
+        </ul>
+        
+        <!-- <h3>Completed</h3>
+        <ul id="completed-tasks">
+          <li>
+            <input type="checkbox" checked="">
+            <label>See the Doctor</label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+        </ul> -->
+      </div>
+
+      <script src="main.js">
+          
+      </script>
+</body>
+</html>
